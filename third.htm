@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>申請内容入力画面</title>
+        <meta charset="UTF-8">
+        <meta charset="Shift_JIS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="third.css">
+        <link rel="stylesheet" href="jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
+        <script src="jquery-ui-1.10.4.custom"></script>
+        <script src="jquery-ui-1.10.4.custom/js/jquery-1.10.2.js"></script>
+        <script src="jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
+    </head>
+    <body>
+    <script>
+    $(function(){
+        $('#gaihaku').click(function(){
+        $('.boxcontainer1').toggle(this.checked);
+        })
+    })
+
+    $(function(){
+        $('#kessyoku').click(function(){
+        $('.boxcontainer2').toggle(this.checked);
+        })
+    })
+
+       
+        jQuery(function($) {
+            
+
+        $.datepicker.setDefaults({
+ 
+        closeText: '閉じる',
+        prevText: '＜前',
+        nextText: '次＞',
+        currentText: '今日',
+        monthNames: ['1月','2月','3月','4月','5月','6月',
+        '7月','8月','9月','10月','11月','12月'],
+        monthNamesShort: ['1月','2月','3月','4月','5月','6月',
+        '7月','8月','9月','10月','11月','12月'],
+        dayNames: ['日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日'],
+        dayNamesShort: ['日','月','火','水','木','金','土'],
+        dayNamesMin: ['日','月','火','水','木','金','土'],
+        weekHeader: '週',
+        dateFormat: 'yymmdd',
+        firstDay: 0,
+        isRTL: false,
+        showMonthAfterYear: true,
+        yearSuffix: '?N',
+ 
+        numberOfMonths: 2,    
+        showCurrentAtPos: 0,   
+        stepMonths: 2,        
+        showButtonPanel: true, 
+        gotoCurrent: true,    
+        minDate: 0, 
+ 
+        firstDay:　7,   
+ 
+        buttonImage: "カレンダー.png",      
+        buttonText: "カレンダーから選択",
+        buttonImageOnly: true,           
+        showOn: "both"                   
+        });
+ 
+       
+        $(".calendar").datepicker();
+      
+        });
+        
+        $(function(){
+             $('#AddForm1').on('click',function(){
+                  $('.boxcontainer1').append('<div class="x"><div class="box"></div></div>');
+                  $('.calendar').datepicker();
+                
+            });
+          
+         });
+        
+         $(function(){
+             $('#addForm1').click(function(){
+                $('.skip-meal').append('<div class="y"><br/><br/></div>');
+                $('.calendar').datepicker();
+           });
+         });
+         
+        $(function(){
+             $('#addForm2').on("click",function(){
+                   $('.one-skip-meal').append('<div class="z"><div class="one-skip-meal"><br/><br/><br/></div></div>');
+                   $('.calendar').datepicker();
+            });
+           });
+           
+        $(function(){
+            $('#DeleteForm1').on("click",function(){
+            $('.x:last').remove();
+             });
+           });
+           
+         $(function(){
+            $('#deleteForm1').on("click",function(){
+            $('.y:last').remove();
+             });
+           });
+           
+        $(function(){
+            $('#deleteForm2').on("click",function(){
+            $('.z:last').remove();
+             });
+           });
+           
+       
+
+</script>
+　　<h>申請内容を入力してください</h>
+    <form>
+    <label><p><input type="checkbox" value="1" id="gaihaku" checked="checked"></input>外泊届</p></label>
+    
+    <div class="boxcontainer1">
+        
+        <div class="box">
+                <p>外泊日時を設定してください</p>
+                
+                出寮<input type="text" class="calendar" autocomplete="off" /> 
+                    
+                    <select name="homecomeor1" size="1">
+                        <option value="1">午前</option> 
+                        <option value="2">午後</option>
+                    </select>
+                    
+                    <select name="gotime" >
+                        <option value="1">0</option> 
+                        <option value="2">1</option>
+                        <option value="3">2</option>
+                        <option value="4">3</option>
+                        <option value="5">4</option> 
+                        <option value="6">5</option>
+                        <option value="7">6</option>
+                        <option value="8">7</option>
+                        <option value="9">8</option> 
+                        <option value="10">9</option>
+                        <option value="11">10</option>
+                        <option value="12">11</option>
+                    </select>
+                    <br>
+		    <br>
+                    帰寮<input type="text" class="calendar" autocomplete="off" /> 
+                    <select name="homecomeor2" >
+                        <option>午前</option> 
+                        <option>午後</option>
+                    </select>
+                    <select name="gettime" >
+                        <option value="1">0</option> 
+                        <option value="2">1</option>
+                        <option value="3">2</option>
+                        <option value="4">3</option>
+                        <option value="5">4</option> 
+                        <option value="6">5</option>
+                        <option value="7">6</option>
+                        <option value="8">7</option>
+                        <option value="9">8</option> 
+                        <option value="10">9</option>
+                        <option value="11">10</option>
+                        <option value="12">11</option>
+                    </select>
+            </div>
+        
+               
+        <div class="box">
+            <p>外泊先を設定してください</p>
+                    <select name="homecomeplace" >
+                        <option value="1">自宅</option> 
+                        <option value="2">岡山市内</option>
+                        <option value="3">津山市内</option>
+                    </select>
+            <p>選択肢になければこちらに入力</p>
+            <textarea  cols="15" rows="3"  ></textarea>
+        </div>
+        
+        <div class="box"><p>外泊理由を設定してください</p>
+                    <select name="homecomereason" >
+                        <option value="1">帰省</option> 
+                        <option value="2">就職活動</option>
+                        <option value="3">津山市内</option>
+                    </select>
+            <p>選択肢になければこちらに入力</p>
+            <textarea  cols="15" rows="3"  ></textarea>
+        </div>
+            
+         
+        
+        <div class="box4">
+               <p1><input type="button" value="申請追加" id="AddForm1"/>
+              <input type="button" value="追加申請削除" id="DeleteForm1"/></p1>
+        </div>
+        
+        </div>
+   
+           
+
+        
+    <label><p><input type="checkbox"  name="kessyoku" id="kessyoku"  checked="checked"></input>欠食届</p></label>
+       
+       <div class="boxcontainer2">
+          
+           <div class="box2">
+                <p>期間申請　　　　　　　　　		　　　　　<input type="button" value="期間追加" id="addForm1"/>
+                <input type="button" value="追加期間削除" id="deleteForm1"/></p>
+                      
+                <div class="skip-meal">
+                    <input type="text" class="calendar" autocomplete="off" /> 
+                    <select name="skipmealtime1" >
+                        <option value="1">朝</option> 
+                        <option value="2">昼</option>
+                        <option value="3">夕</option>
+                    </select>から
+		    <br>
+		    <br>
+                    <input type="text" class="calendar" autocomplete="off" /> 
+                    <select name="skipmealtime2" >
+                        <option value="1">朝</option> 
+                        <option value="2">昼</option>
+                        <option value="3">夕</option>
+                    </select>まで
+                    
+                    
+                 
+
+                <p>欠食理由を設定してください</p>
+                    <select name="skipmealreason1" >
+                        <option value="1">帰省</option> 
+                        <option value="2">就職活動</option>
+                        <option value="3">部活</option>
+                        <option value="4">外出</option>
+                    </select>
+                <p>選択肢になければこちらに入力</p>
+                <textarea  cols="15" rows="3"  ></textarea>
+           </div>
+           </div>
+                      
+           
+           
+            
+           
+           
+           <div class="box2">
+		<p>個別申請　　　　　　　　　　　　　　<input type="button" value="日にち追加" id="addForm2"/>
+           <input type="button" value="追加日にち削除" id="deleteForm2"/></p>
+                <div class="one-skip-meal">
+                    <input type="text" class="calendar" autocomplete="off" /> 
+                    <select name="skipmealtime3" >
+                        <option value="1">朝</option> 
+                        <option value="2">昼</option>
+                        <option value="3">夕</option>
+                    </select>
+                    
+                    
+                
+                <p>欠食理由を設定してください</p>
+                    <select name="skipmealreason2">
+                        <option value="1">帰省</option> 
+                        <option value="2">就職活動</option>
+                        <option value="3">部活</option>
+                        <option value="4">外出</option>
+                    </select>
+                <p>選択肢になければこちらに入力</p>
+                <textarea  cols="15" rows="3"  ></textarea>
+           </div>
+           </div>
+           
+           
+           
+       </div>
+    
+   
+        <p5><input type="button"  value="取消"  onclick='return confirm("ログイン画面まで戻りますが、本当によろしいですか？");'/></p5>
+    
+    
+    
+    <p6><input type="button"  value="送信"  onclick='return confirm("確認は大丈夫ですか？よろしければ申請してください。");'/></p6>
+    
+    </form>
+    
+    </body>
+</html>

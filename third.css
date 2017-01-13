@@ -1,0 +1,92 @@
+.box {
+	float: left;
+              margin: 0px 50px 50px 50px;
+              
+}
+
+.boxcontainer1 {
+	overflow: hidden;
+        
+}
+
+.box2 {
+	float: left;
+              margin: 0px 50px 50px 50px;
+}
+
+.boxcontainer2 {
+	overflow: hidden;
+        
+}
+
+.box3 {
+	float: left;
+        margin: 0px 1600px 50px 50px;
+}
+
+.box4 {
+	
+	float: left;
+        margin: 20px 0px 100px 25px;
+}
+
+
+
+
+h{
+    font-size: 50px;
+}
+
+p1{
+    float:right;
+}
+
+p5{
+    float:left;
+}
+
+p6{
+    float:right;
+}
+
+
+
+/* 日曜始まりの土日カラー設定 */
+/* 日曜日のカラー設定 */
+.ui-datepicker-calendar tr td:first-child a{
+  //background: none!important;       // 背景画像を利用しているのでリセット
+  background-color: red;//!important; // 背景色を設定
+  color: red;//!important;            // 文字色を設定
+}
+
+/* 土曜日のカラー設定 */
+.ui-datepicker-calendar tr td:last-child a{
+  background: none!important;       // 背景画像を利用しているのでリセット
+  background-color: #ccf!important; // 背景色を設定
+  color: #00f!important;            // 文字色を設定
+}
+ 
+/* 年月をプルダウン化した場合の余白調整 */
+/* 年プルダウンの変更 */
+select.ui-datepicker-year{
+  padding:3px 0!important;    // 余白は最小限に
+  margin-right:5px!important; // 年ラベルとの余白
+  width:60px!important;       // サイズ微調整
+}
+/* 月プルダウンの変更 */
+select.ui-datepicker-month{
+  padding:3px 0!important;    // 余白は最小限に
+  margin-left:5px!important;  // 年ラベルとの余白
+  width:56px!important;       // サイズ微調整 
+}
+// プルダウン有無によりヘッダー部の高さが変わるので調整
+.ui-datepicker-title span{
+  display: inline-block;     // マージン等が適用できるように変更
+  margin: 4.5px 0!important; // 微調整 (必要に応じて)
+  padding: 0!important;      // 微調整 (必要に応じて) 
+}
+
+
+
+
+ 
