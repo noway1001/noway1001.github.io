@@ -84,7 +84,7 @@ and open the template in the editor.
         
          $(function(){
              $('#addForm1').click(function(){
-                $('.skip-meal').append('<div class="y"><br/><br/></div>');
+                $('.skip-meal').append('<div class="y"> <p>期間申請　　　　　　　　　		　　　　　</p><div class="skip-meal"><input type="text" class="calendar" autocomplete="off" > <select name="skipmealtime1" ><option value="1">朝</option><option value="2">昼</option> <option value="3">夕</option></select>から<br> <br><input type="text" class="calendar" autocomplete="off" > <select name="skipmealtime2" ><option value="1">朝</option> <option value="2">昼</option><option value="3">夕</option></select>まで<p>欠食理由を設定してください</p><select name="skipmealreason1" ><option value="1">帰省</option> <option value="2">就職活動</option><option value="3">部活</option><option value="4">外出</option></select><p>選択肢になければこちらに入力</p> <textarea  cols="15" rows="3"  ></textarea></div><br/><br/></div>');
                 $('.calendar').datepicker();
            });
          });
